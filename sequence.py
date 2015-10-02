@@ -1,6 +1,6 @@
 class LongSequenceMaker:
     def __init__(self, findMe):
-        assert findMe.isdigit and int(findMe) > 0
+        assert findMe.isdigit() and int(findMe) > 0
         self.__curSequence = '1'
         self.__curNum = 1
         self.__pos = 1
