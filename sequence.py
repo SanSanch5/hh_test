@@ -1,16 +1,5 @@
 import sys
-import time
-# from math import sqrt
-# from itertools import count, islice
 
-# def isPrime(n):
-#     return all(n % i for i in islice(count(2), int(sqrt(n)-1)))
-
-# q = 9100000
-# while not isPrime(q):
-#     q -= 1
-# q = 100000004987
-# print(q)
 q = sys.maxsize // 10
 
 class LongSequenceMaker:
@@ -36,8 +25,6 @@ class LongSequenceMaker:
             self.__localPos -= self.resizeFactor
             self.__curSequence = str(self.__curSequence)[self.resizeFactor:]
         if len(self.__curSequence) <= self.__localPos + self.__rang:
-            # num = self.__curNum
-            # for i in range(num,num + 10000):
             self.__curNum += 1
             self.__curSequence += str(self.__curNum)
 
@@ -64,12 +51,3 @@ print("Input number: \n")
 while True:
     seq = LongSequenceMaker(input())
     print(seq.count())
-# for factor in range(1, 100, 10):
-    # t = 0
-    # for i in range(100):
-    #     seq = LongSequenceMaker('756434')
-    #     seq.resizeFactor = factor
-    #     t1 = time.time()
-    #     seq.count()
-    #     t += time.time() - t1
-    # print("\t{0} -".format(factor) + "\tTime elapsed: {:.3f}".format(t/100))
